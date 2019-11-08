@@ -1,5 +1,4 @@
 const rules = require('./webpack.rules');
-const CopyPlugin = require('copy-webpack-plugin');
 
 rules.push({
   test: /\.css$/,
