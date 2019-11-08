@@ -30,11 +30,28 @@ import ReactDOM from 'react-dom';
 
 import styled from 'styled-components';
 
+ const sharp = require('sharp');
 //const sharp = require('sharp');
-//var debug = require('debug')('sharp'), 
-//const sharp = require('sharp')
-//, name = 'My App';
+//var debug = require('debug')('sharp'),  sharp = require('sharp'), name = 'sharp-ef6';
 
+const semiTransparentRedPng = sharp({
+    create: {
+      width: 48,
+      height: 48,
+      channels: 4,
+      background: { r: 255, g: 0, b: 0, alpha: 0.5 }
+    }
+  }).png().toFile('preview.png', (err, info) => {
+    if (err) {
+      console.log('err in test.png: ', err);
+      Alert('USB RX JSON Error', err.message, 'error');
+    }
+    if (info) {
+      console.log('test.png info: ', info);
+      console.log(this.imageType)
+      this.emitter.emit("captured_image", { imageType: this.imageType, imageHash: Date.now().toString(), imagePath, histogram, histoPath })
+    }
+  });
  
 //debug('booting %o', name);
 
