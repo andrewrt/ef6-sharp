@@ -25,11 +25,45 @@
  *  });
  * ```
  */
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-const sharp = require('sharp');
+import styled from 'styled-components';
 
-ReactDOM.render(<div>hello world from React! </div>, document.getElementById('root'));
+//const sharp = require('sharp');
+//var debug = require('debug')('sharp'), 
+//const sharp = require('sharp')
+//, name = 'My App';
 
-console.log('👋 This message is being logged by "renderer - app.js", included via webpack');
+ 
+//debug('booting %o', name);
+
+
+
+
+ const Container = styled.div`
+    width: 100vw;
+    height: 100vh;
+    background-color: #333;
+ `;
+
+ const Text = styled.div`
+    font-size: 20px;
+    color: #ccc;
+    text-align: center;
+ `;
+
+
+export default class App extends React.Component{
+
+
+    render(){
+        return (
+            <Container>
+               <Text> Hello From React!</Text>
+            </Container>
+        );
+    }
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));

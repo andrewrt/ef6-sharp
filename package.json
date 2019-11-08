@@ -43,6 +43,9 @@
         }
       ],
       "plugins": [
+        {
+          "process.browser": "true"
+        },
         [
           "@electron-forge/plugin-webpack",
           {
@@ -66,7 +69,8 @@
     "electron-squirrel-startup": "^1.0.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "sharp": "^0.23.2"
+    "sharp": "^0.23.2",
+    "styled-components": "^4.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.7.2",
