@@ -30,7 +30,7 @@ import ReactDOM from 'react-dom';
 
 import styled from 'styled-components';
 
-//const sharp = require('sharp');
+const sharp = require('sharp');
 //var debug = require('debug')('sharp'), 
 //const sharp = require('sharp')
 //, name = 'My App';
