@@ -1,4 +1,5 @@
 const rules = require('./webpack.rules');
+// const CopyPlugin = require('copy-webpack-plugin');
 
 rules.push({
   test: /\.css$/,
@@ -13,4 +14,13 @@ module.exports = {
   externals: {
     "sharp": 'commonjs sharp',
   },
+  // plugins: [
+  //   new CopyPlugin([
+  //     {
+  //       from: './node_modules/sharp/',
+  //       to: 'main_window/node_modules/sharp/', // still under node_modules directory so it could find this module
+  //       // ignore: [...]
+  //     },
+  //   ]),
+  // ]
 };

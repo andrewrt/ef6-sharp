@@ -1,6 +1,6 @@
 {
-  "name": "test-ef6",
-  "productName": "test-ef6",
+  "name": "sharp-ef6",
+  "productName": "sharp-ef6",
   "version": "1.0.0",
   "description": "My Electron application description",
   "main": ".webpack/main",
@@ -20,9 +20,9 @@
   "config": {
     "forge": {
       "packagerConfig": {
-        "afterExtract": [
-          "./sharp.package.js"
-        ]
+        // "afterExtract": [
+        //   "./sharp.package.js"
+        // ]
       },
       "makers": [
         {
